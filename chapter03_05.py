@@ -45,3 +45,75 @@ print('b -', b[0])
 print('b -', b.get(0))
 
 
+# 딕셔너리 추가
+a['address'] = 'seoul'
+print('a -', a)
+a['rank'] = [1,2,3]
+print('a -', a)
+
+# 딕셔너리 길이
+print('a - ', len(a)) # len은 키의길이 확인하는 함수
+
+# dict_keys, dict_values, dict_items : 반복문에서 사용 가능
+
+print('a -', a.keys())  # 밸류값은 신경쓰지않고 키값들만 출력함
+print('b -', b.keys())
+print('c -', c.keys())
+print('d -', d.keys())
+print('e -', e.keys())
+
+print('a -', list(a.keys())) # keys 함수를 불러오고 list형변환으로 하면 키 값들을 리스트로 가져옴
+print('b -', list(b.keys())) 
+
+print()
+
+print('a -', a.values()) # 밸류(값)만 가져옴
+print('b -', b.values())
+print('c -', c.values())
+
+print()
+
+#키와 밸류를 동시에 가져오는 메소드 items
+print('a -', a.items())
+print('b -', b.items())
+print('c -', c.items())
+
+print('a -', list(a.items()))
+print('b -', list(b.items()))
+
+print()
+
+print('a -', a.pop('name'))
+print('a - ', a)
+
+print('c -', c.pop('arr'))
+print('c - ', c)
+
+print()
+
+print('f -', f.popitem()) #아무거나 임의로 하나 꺼내옴 # pop이 들어가면 무조건 원본데이터는 삭제
+print('f -', f) # 출력해보면 가져온값은 출력되지않음
+
+print()
+
+# in메소드
+
+print('a -', 'birth' in a) # birth라는 키가 a에 있어? 있으면 True반환 없으면 False반환
+print('a -', 'birth2' in a) # birth2라는 키는 없기에 False반환
+print('a -', 'City' in d) # 대소문자를 가리기에  city는 False반환 City는 True반환
+
+
+# 수정 & 추가
+a['test'] = 'test_dict'
+print('a-', a)
+
+a['address'] = 'dj'
+print('a -', a)
+
+a.update(birth='910904')
+print('a -', a)
+temp = {'address': 'Busan'}
+
+# 수정
+a.update(temp)
+print('a -', a) 
